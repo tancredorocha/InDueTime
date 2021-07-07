@@ -26,8 +26,10 @@ class BarsBackGound extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.fromLTRB(2,0, 3, 0),
-      child: ListView(children: [
-        for (var i in times) WholeHour(time:i)
+      child: ListView(
+        physics: NeverScrollableScrollPhysics(),
+        children: [
+          for (var i in times) WholeHour(time:i)
         ],)
     );
   }

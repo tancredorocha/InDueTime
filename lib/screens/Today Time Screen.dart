@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:main_app/componants/TodayTimeBars/bars.dart';
+import 'package:main_app/componants/ItemWidgets/ItemWidgets.dart';
 import 'package:main_app/componants/TodayTimeBars/barsBakgound.dart';
+
 
 class TodayTimeScreen  extends StatefulWidget {
   const TodayTimeScreen({ Key key }) : super(key: key);
@@ -27,10 +28,13 @@ class _State extends State<TodayTimeScreen> {
           shadowColor: null,
           toolbarHeight: 45,
         ),
-        body: Container(
-          child:  BarsBackGound(),
-          alignment: Alignment.center,)
+        body: Stack(
+            children: [
+              Positioned(child: BarsBackGound(), left: 0,),
+              TodayViewItemWidget()],
+              alignment: Alignment.center
+          ),
+    );
        
-      );
   }
 }

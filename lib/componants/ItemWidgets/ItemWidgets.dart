@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'ItemClass.dart';
+import '../../src/ItemClass.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 
