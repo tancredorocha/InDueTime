@@ -1,0 +1,3 @@
+# InDueTime
+
+This is an incomplete productivity app buildon the Flutter frame works. The intention of this app is combine priority managment and time management. It is supposed to store users to do list, and interactect with their preexisting calender to scheduel to do item in the day around preschedules events. 
