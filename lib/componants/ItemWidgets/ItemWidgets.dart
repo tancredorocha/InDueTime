@@ -1,13 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../../models/ItemClass.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import '../../models/ItemModel.dart';
 
 class TodayViewItemWidget extends StatefulWidget {
-  TodayViewItemWidget({Key key, this.item}) : super(key: key);
-  Future<Item> item;
+  TodayViewItemWidget({Key? key, this.item}) : super(key: key);
+  Item? item;
   @override
   _State createState() => _State();
 }
@@ -17,7 +14,7 @@ class _State extends State<TodayViewItemWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: 261,
-      height: 81,
+      height: widget.item!.estTime! * 81 / 60,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -25,7 +22,7 @@ class _State extends State<TodayViewItemWidget> {
         children: [
           Container(
             width: 261,
-            height: 81,
+            height: widget.item!.estTime! * 81 / 60,
             child: Stack(
               children: [
                 Positioned.fill(
@@ -48,58 +45,40 @@ class _State extends State<TodayViewItemWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          FutureBuilder(
-                            future: widget.item,
-                            builder: (context, snapshot) {
-                              switch (snapshot.connectionState) {
-                                case ConnectionState.none:
-                                  return Text('None');
-                                case ConnectionState.active:
-                                  return Text('active');
-                                case ConnectionState.waiting:
-                                  return Text('waiting');
-                                case ConnectionState.done:
-                                  return Container(
-                                    width: 261,
-                                    height: 27.68,
-                                    padding: const EdgeInsets.only(
-                                      left: 7,
-                                      right: 9,
+                          Container(
+                            width: 261,
+                            height: 27.68,
+                            padding: const EdgeInsets.only(
+                              left: 7,
+                              right: 9,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "${widget.item!.name}-list",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                Expanded(child: Container()),
+                                SizedBox(
+                                  width: 107,
+                                  height: 12,
+                                  child: Text(
+                                    "Time-Time",
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 11,
                                     ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "${snapshot.data.name}-list",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                        Expanded(child: Container()),
-                                        SizedBox(
-                                          width: 107,
-                                          height: 12,
-                                          child: Text(
-                                            "Time-Time",
-                                            textAlign: TextAlign.right,
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 11,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                  break;
-                                default:
-                                  return Text('default');
-                              }
-                            },
+                                  ),
+                                ),
+                              ],
+                            ),
                           )
                         ],
                       ),
@@ -108,7 +87,7 @@ class _State extends State<TodayViewItemWidget> {
                 ),
                 Container(
                   width: 261,
-                  height: 81,
+                  height: widget.item!.estTime! * 81 / 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [

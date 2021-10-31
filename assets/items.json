@@ -1,16 +1,61 @@
-{
-    "_id": {
-        "$oid": "60aeef9059aa864e9096c694"
-    },
-    "name": "Write Into",
-    "done": "0",
-    "estTime": "30",
-    "dueDate": "06/21/2021",
-    "isRepeat": "0",
-    "repeatString": "null",
-    "des": "null",
-    "idItem": "20",
-    "idList": "5",
-    "idSubList": "null",
-    "idUser": "1"
-}
+[{
+  "_id": {
+    "$oid": "60aeef9059aa864e9096c694"
+  },
+  "name": "Write Into",
+  "done": "0",
+  "estTime": "30",
+  "dueDate": "06/21/2021",
+  "isRepeat": "0",
+  "repeatString": "null",
+  "des": "null",
+  "idItem": "20",
+  "idList": "5",
+  "idSubList": "null",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeef9059aa864e9096c681"
+  },
+  "name": "HW1",
+  "done": "0",
+  "estTime": "45",
+  "dueDate": "05/26/2021",
+  "isRepeat": "0",
+  "repeatString": "null",
+  "des": "null",
+  "idItem": "1",
+  "idList": "2",
+  "idSubList": "null",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeef9059aa864e9096c683"
+  },
+  "name": "HW3",
+  "done": "0",
+  "estTime": "45",
+  "dueDate": "06/07/2021",
+  "isRepeat": "0",
+  "repeatString": "null",
+  "des": "null",
+  "idItem": "3",
+  "idList": "2",
+  "idSubList": "null",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeef9059aa864e9096c693"
+  },
+  "name": "Write Code",
+  "done": "0",
+  "estTime": "90",
+  "dueDate": "06/21/2021",
+  "isRepeat": "0",
+  "repeatString": "null",
+  "des": "null",
+  "idItem": "19",
+  "idList": "5",
+  "idSubList": "null",
+  "idUser": "1"
+}]

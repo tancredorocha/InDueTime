@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "60aeefa959aa864e9096c6a8"
+  },
+  "name": "Daily Rountine - Morning",
+  "category": "Personal",
+  "isSubList": "1",
+  "idList": "6",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeefa959aa864e9096c6a3"
+  },
+  "name": "Data Stuctures",
+  "category": "School",
+  "isSubList": "0",
+  "idList": "2",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeefa959aa864e9096c6a9"
+  },
+  "name": "Daily Rountine - Night",
+  "category": "",
+  "isSubList": "1",
+  "idList": "7",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeefa959aa864e9096c6a5"
+  },
+  "name": "Calc 3",
+  "category": "School",
+  "isSubList": "0",
+  "idList": "3",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeefa959aa864e9096c6a4"
+  },
+  "name": "Daily Rountine",
+  "category": "Personal",
+  "isSubList": "0",
+  "idList": "1",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeefa959aa864e9096c6a6"
+  },
+  "name": "Data Stuctures - Project 1",
+  "category": "School",
+  "isSubList": "1",
+  "idList": "4",
+  "idUser": "1"
+},{
+  "_id": {
+    "$oid": "60aeefa959aa864e9096c6a7"
+  },
+  "name": "Calc  3 - Project 1",
+  "category": "School",
+  "isSubList": "1",
+  "idList": "5",
+  "idUser": "1"
+}]

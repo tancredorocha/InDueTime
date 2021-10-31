@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:main_app/componants/TodayTimeBars/bars.dart';
 
 class WholeHour extends StatelessWidget {
-  WholeHour({Key key, this.time}) : super(key: key);
+  WholeHour({Key? key, this.time}) : super(key: key);
   final time;
 
   @override
@@ -24,7 +24,7 @@ class WholeHour extends StatelessWidget {
 }
 
 class BarsBackGound extends StatelessWidget {
-  BarsBackGound({Key key}) : super(key: key);
+  BarsBackGound({Key? key}) : super(key: key);
   final times = [
     0,
     1,
